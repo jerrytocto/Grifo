@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app_grifo"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="18dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_grifo_ofis" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:background="@color/nombre_empresa">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Distribuidora JJJJJ"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/background_app_grifo_component"
+        android:hint="@string/label_user"
+        app:layout_constraintTop_toBottomOf="@id/cvLogo"
+        app:startIconDrawable="@drawable/ic_email"
+        android:drawableTint="@color/background_app_grifo_icons">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_app_grifo_component"
+            android:inputType="textEmailSubject"
+            android:textColor="@color/txtInfoEditTittle"
+            android:theme="@style/EditTextTheme"
+            android:textSize="17dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/background_app_grifo_component"
+        android:hint="@string/label_password"
+        app:layout_constraintTop_toBottomOf="@id/txtInputUser"
+        app:startIconDrawable="@drawable/ic_lock"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_app_grifo_component"
+            android:inputType="textPassword"
+            android:theme="@style/EditTextTheme"
+            android:textSize="17dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/lyButtom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtInputPassword">
+
+        <Button
+            android:id="@+id/btnIniciarSesion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#90EE90"
+            android:drawableEnd="@drawable/ic_login"
+            android:drawableTint="#fff"
+            android:text="@string/iniciar_sesion"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/lyButtom">
+
+        <TextView
+            android:id="@+id/txtNuevoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:text="@string/label_nuevoUser"
+            android:textColor="@color/txtInfoEditTittle"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center|center_horizontal"
+            android:text="@string/label_olvide_password"
+            android:textColor="@color/txtInfoEditTittle"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

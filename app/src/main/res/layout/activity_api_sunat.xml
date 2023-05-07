@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app_grifo"
+    tools:context=".activity.apiSunat.ApiSunatActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lyAfiliarPersona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="15dp"
+            android:gravity="center_horizontal"
+            android:text="Afiliar Persona"
+            android:textColor="@color/txtInfoEditTittle"
+            android:textSize="23dp"
+            android:textStyle="italic|bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTipoDocumento"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginHorizontal="20dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/txtInfoEditTittle"
+            android:textSize="18dp"
+            android:theme="@style/EditTextTheme">
+
+            <AutoCompleteTextView
+                android:id="@+id/searchBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/item_label"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/numDocument"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/documento_buscar"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColorHint="@color/txtInfoEditTittle"
+                android:textSize="18dp"
+                android:theme="@style/EditTextTheme" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#90EE90"
+                android:drawableEnd="@drawable/ic_search_24"
+                android:drawableTint="@color/background_app_grifo_icons" />
+        </LinearLayout>
+
+        <!--Tarjeta para cuando los datos se consulten por RUC-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDatosPerRUC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_app_grifo_component"
+                android:orientation="vertical"
+                android:textColorHint="@color/design_default_color_primary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre_comercial"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/edtDatosPer"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:inputType="none"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/RUC"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtInfoEditTittle"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txtNumRUC"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:inputType="none"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/estado"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtInfoEditTittle"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txtEstado"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:inputType="none"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Tarjeta para los datos cuando se consulte por DNI-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/llyDatosPer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_app_grifo_component"
+                android:orientation="vertical"
+
+                android:textColorHint="@color/design_default_color_primary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre_user_dni"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/txtNomRazonSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:inputType="none"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/DNI"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtInfoEditTittle"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txtDni"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:inputType="none"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Datos opcionales para afiliar-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDatosOpcionalesReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_app_grifo_component"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numTelefono"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/editNumTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/direccionActual"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/editDireccionActual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Layout para los botones de vinculacion o cancelación-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/design_default_color_primary"
+                android:text="Regresar"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnVincular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#90EE90"
+                android:text="Vincular"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app_grifo"
+    tools:context=".activity.registrarUsuarioActivity">
+
+    <LinearLayout
+        android:id="@+id/linLayRegistrarUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="15dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/background_app_grifo_component"
+                android:gravity="center"
+                android:text="Registrar Usuario"
+                android:textColor="@color/txtInfoEditTittle"
+                android:textSize="35dp"
+                android:textStyle="italic|bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDatosPersonales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardTitulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_app_grifo_component"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtApePaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/ic_edit_label"
+                    android:drawableTint="@color/background_app_grifo_icons"
+                    android:hint="@string/ape_paterno"
+                    android:inputType="none"
+                    android:textColorHint="@color/txtInfoEditTittle"
+                    android:textSize="17dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtapeMaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/ic_edit_label"
+                    android:drawableTint="@color/background_app_grifo_icons"
+                    android:hint="@string/ape_materno"
+                    android:inputType="none"
+                    android:textColorHint="@color/txtInfoEditTittle"
+                    android:textSize="17dp"
+                    android:theme="@style/EditTextTheme"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUserNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/ic_edit_label"
+                    android:drawableTint="@color/background_app_grifo_icons"
+                    android:hint="@string/nombre_usuario"
+                    android:inputType="none"
+                    android:textColorHint="@color/txtInfoEditTittle"
+                    android:textSize="17dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/ic_email"
+                    android:drawableTint="@color/background_app_grifo_icons"
+                    android:hint="@string/userEmail"
+                    android:inputType="none"
+                    android:textColorHint="@color/txtInfoEditTittle"
+                    android:textSize="17dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtNomCor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/ic_edit_label"
+                    android:drawableTint="@color/background_app_grifo_icons"
+                    android:hint="@string/userNomCor"
+                    android:inputType="none"
+                    android:textColorHint="@color/txtInfoEditTittle"
+                    android:textSize="17dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUserPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/ic_lock"
+                    android:drawableTint="@color/background_app_grifo_icons"
+                    android:hint="@string/label_password"
+                    android:inputType="none"
+                    android:textColorHint="@color/txtInfoEditTittle"
+                    android:textSize="17dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/select_foto"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:onClick="abrirGaleria"
+                        android:text="@string/label_foto"
+                        android:textColor="@color/txtInfoEditTittle"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignTop="@id/select_foto"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@id/select_foto"
+                        android:clickable="true"
+                        android:contentDescription="@string/add_photo"
+                        android:focusable="true"
+                        android:onClick="abrirGaleria"
+                        android:src="@drawable/ic_add_foto" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtAfiliarPersona"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:drawableEnd="@drawable/ic_company"
+                    android:drawableTint="@color/background_app_grifo_icons"
+                    android:gravity="center"
+                    android:text="@string/afiliarPer"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="18sp"
+                    android:textStyle="italic|bold" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/cardDatosPersonales">
+
+            <TextView
+                android:id="@+id/txtIniciarSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:onClick="iniciarSesion"
+                android:text="Regresar"
+                android:textColor="@color/txtInfoEditTittle"
+                android:textSize="18sp"
+                android:textStyle="italic|bold" />
+
+            <Button
+                android:id="@+id/btnRegistrarEmpresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#90EE90"
+                android:drawableEnd="@drawable/ic_company"
+                android:drawableTint="@color/background_app_grifo_icons"
+                android:text="Registrarse"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lyAfiliarPersona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="15dp"
+            android:gravity="center_horizontal"
+            android:text="Afiliar Persona"
+            android:textColor="@color/txtInfoEditTittle"
+            android:textSize="23dp"
+            android:textStyle="italic|bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTipoDocumento"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginHorizontal="20dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/txtInfoEditTittle"
+            android:textSize="18dp"
+            android:theme="@style/EditTextTheme">
+
+            <AutoCompleteTextView
+                android:id="@+id/searchBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/item_label"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/numDocument"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/documento_buscar"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColorHint="@color/txtInfoEditTittle"
+                android:textSize="18dp"
+                android:theme="@style/EditTextTheme" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#90EE90"
+                android:drawableEnd="@drawable/ic_search_24"
+                android:drawableTint="@color/background_app_grifo_icons" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDatosPerRUC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_app_grifo_component"
+                android:orientation="vertical"
+                android:textColorHint="@color/design_default_color_primary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre_comercial"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/edtDatosPer"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/RUC"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtInfoEditTittle"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txtNumRUC"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/estado"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtInfoEditTittle"
+                        android:textSize="17dp" />
+
+                    <TextView
+
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/llyDatosPer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_app_grifo_component"
+                android:orientation="vertical"
+                android:textColorHint="@color/design_default_color_primary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre_comercial"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/txtNomRazonSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/DNI"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtInfoEditTittle"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txtDni"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_app_grifo_component"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numTelefono"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/editNumTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/direccionActual"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtInfoEditTittle"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/editDireccionActual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:theme="@style/EditTextTheme" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/design_default_color_primary"
+                android:text="Regresar"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnVincular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#90EE90"
+                android:text="Vincular" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

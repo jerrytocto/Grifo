@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="background_component_select">#FF111328</color>
+    <color name="background_app">#0B0E20</color>
+    <color name="background_component">#1D1E33</color>
+    <color name="background_button">#EB1555</color>
+    <color name="link">#0E7BD1</color>
+    <color name="background_app_grifo">#A3B4B6</color>
+    <color name="background_app_grifo_component">#DCE2E3</color>
+    <color name="background_app_grifo_icons">#256A9E</color>
+    <color name="txtInfoEditTittle">#F3256A9E</color>
+    <color name="butons">#ED25479E</color>
+    <color name="nombre_empresa">#7C4E5991</color>
+
+
+</resources>

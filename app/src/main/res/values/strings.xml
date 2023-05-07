@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Grifo</string>
+    <string name="hola">Identifíquese para iniciar sesisón</string>
+    <string name="label_user">Correo Electrónico*</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="label_nuevoUser">¿Nuevo Usuario? Registrarme ahora</string>
+    <string name="label_olvide_password">Olvidé mi contraseña?</string>
+    <string name="label_password">Contraseña</string>
+    <string name="title_activity_inicio">InicioActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="userName">JerryDev</string>
+    <string name="email">jerrytocto@gmail.com</string>
+    <string name="nombre_usuario">Nombres</string>
+    <string name="ape_paterno">Apellido paterno</string>
+    <string name="userEmail">Correo electrónico</string>
+    <string name="add_photo">Agregar foto (Opcional)</string>
+    <string name="label_foto">Seleccionar foto (Opcional)</string>
+    <string name="afiliarPer">Afiliar Persona</string>
+    <string name="txtInicioSesion">Iniciar Sesión</string>
+    <string name="documento_buscar">Numero Documento</string>
+    <string name="item_label">Tipo Documento</string>
+    <string name="nombre_comercial">Nombre o denominación social</string>
+    <string name="nombre_user_dni">Apellido y nombres</string>
+    <string name="denominacionORZ">Denominación o Razón Social</string>
+    <string name="direccion">Dirección</string>
+    <string name="numTelefono">Número Teléfonico(Opcional)</string>
+    <string name="direccionActual">Dirección Actual(Opcional)</string>
+    <string name="RUC">RUC</string>
+    <string name="estado">Estado</string>
+    <string name="DNI">DNI</string>
+    <string name="ape_materno">Apellido materno</string>
+    <string name="userNomCor">Nombre corto\n</string>
+</resources>
