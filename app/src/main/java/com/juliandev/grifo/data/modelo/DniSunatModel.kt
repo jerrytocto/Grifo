@@ -1,4 +1,4 @@
-package com.juliandev.grifo.activity.apiSunat.sunatModel
+package com.juliandev.grifo.data.modelo
 
 import com.google.gson.annotations.SerializedName
 

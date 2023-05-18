@@ -1,4 +1,4 @@
-package com.juliandev.grifo.activity
+package com.juliandev.grifo.ui.view.activity
 
 
 import android.content.Intent
@@ -8,19 +8,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.view.isGone
-import androidx.core.view.isVisible
+import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import com.juliandev.grifo.databinding.ActivityRegistrarUsuarioBinding
-import com.juliandev.grifo.MainActivity
-import com.juliandev.grifo.activity.apiSunat.ApiSunatActivity
+import com.juliandev.grifo.ui.viewModel.RegistrarUsuarioViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class registrarUsuarioActivity : AppCompatActivity() {
+class RegistrarUsuarioActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityRegistrarUsuarioBinding
+    private val registrarUsuarioViewModel:RegistrarUsuarioViewModel by viewModels()
+
     private var imagenSeleccionada: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,19 +31,40 @@ class registrarUsuarioActivity : AppCompatActivity() {
         binding = ActivityRegistrarUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initListener()
+        binding.btnRegistrarUser.setOnClickListener {
+            val apePater = binding.txtApePaterno.text.toString()
+            val apeMater = binding.txtapeMaterno.text.toString()
+            val nombre = binding.txtUserNombre.text.toString()
+            val email = binding.txtEmail.text.toString()
+            val password = binding.txtPassword.text.toString()
+
+            registrarUsuarioViewModel.recibirDatosRegistrar(apePater, apeMater,nombre,email,password)
+        }
+        registrarUsuarioViewModel.verificarCampos.observe(this, Observer {mensaje->
+            Toast.makeText(this,mensaje, Toast.LENGTH_SHORT).show()
+        })
+        registrarUsuarioViewModel.verificarCorreo.observe(this, Observer { mensaje->
+            Toast.makeText(this,mensaje, Toast.LENGTH_SHORT).show()
+        })
     }
 
     private fun initListener() {
-        binding.txtAfiliarPersona.setOnClickListener { afiliarUsuario() }
+//        binding.txtAfiliarPersona.setOnClickListener { afiliarUsuario() }
+//        binding.tvAfiliarNum.setOnClickListener { afiliarNumeroTelefono() }
+
     }
 
-    private fun afiliarUsuario() {
-        val intent=Intent(this,ApiSunatActivity::class.java)
-        startActivity(intent)
-//        binding.linLayRegistrarUsuario.visibility = View.GONE
-//        binding.lyAfiliarPersona.visibility = View.VISIBLE
-    }
+//    private fun afiliarNumeroTelefono() {
+//        val intem = Intent(this,ApiWhatsAppActivity::class.java)
+//        startActivity(intem)
+//    }
+
+//    private fun afiliarUsuario() {
+//        val intent=Intent(this, ApiSunatActivity::class.java)
+//        startActivity(intent)
+////        binding.linLayRegistrarUsuario.visibility = View.GONE
+////        binding.lyAfiliarPersona.visibility = View.VISIBLE
+//    }
 
     // Función para abrir la galería y seleccionar una imagen
     private val seleccionarFoto = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
@@ -68,12 +91,9 @@ class registrarUsuarioActivity : AppCompatActivity() {
     }
 
     fun iniciarSesion(view: View){
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
-    fun afiliarUsuario(view:View){
-
-    }
 
 }

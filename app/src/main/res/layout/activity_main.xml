@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_app_grifo"
-    tools:context=".MainActivity">
+    tools:context=".ui.view.activity.MainActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvLogo"
@@ -140,15 +140,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center|center_horizontal"
-            android:text="@string/label_olvide_password"
-            android:textColor="@color/txtInfoEditTittle"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

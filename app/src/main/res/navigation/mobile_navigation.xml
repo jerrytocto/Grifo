@@ -7,19 +7,32 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.juliandev.grifo.activity.ui.home.HomeFragment"
+        android:name="com.juliandev.grifo.ui.view.fragment.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.juliandev.grifo.activity.ui.gallery.GalleryFragment"
+        android:name="com.juliandev.grifo.ui.view.fragment.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.juliandev.grifo.activity.ui.slideshow.SlideshowFragment"
+        android:name="com.juliandev.grifo.ui.view.fragment.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_vincular_user"
+        android:name="com.juliandev.grifo.ui.view.fragment.VincularUserFagment"
+        android:label="@string/menu_vincularUser"
+        tools:layout="@layout/fragment_vincular_user"/>
+
+    <fragment
+        android:id="@+id/nav_prueba"
+        android:name="com.juliandev.grifo.ui.view.fragment.PruebaFragment"
+        android:label="@string/menu_vincularUser"
+        tools:layout="@layout/fragment_prueba" />
+
 </navigation>

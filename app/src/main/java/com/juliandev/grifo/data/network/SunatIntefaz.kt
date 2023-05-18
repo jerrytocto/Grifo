@@ -1,7 +1,7 @@
-package com.juliandev.grifo.activity.apiSunat.service
+package com.juliandev.grifo.data.network
 
-import com.juliandev.grifo.activity.apiSunat.sunatModel.DniSunatModel
-import com.juliandev.grifo.activity.apiSunat.sunatModel.SunatModel
+import com.juliandev.grifo.data.modelo.DniSunatModel
+import com.juliandev.grifo.data.modelo.SunatModel
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -9,7 +9,7 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface SunatService {
+interface SunatIntefaz {
 
     @GET("sunat/ruc/{ruc}")
     suspend fun searchRegisterByRUC(

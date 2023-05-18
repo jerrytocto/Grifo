@@ -5,7 +5,7 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="label_nuevoUser">¿Nuevo Usuario? Registrarme ahora</string>
     <string name="label_olvide_password">Olvidé mi contraseña?</string>
-    <string name="label_password">Contraseña</string>
+    <string name="label_password">Contraseña( Obligatorio)</string>
     <string name="title_activity_inicio">InicioActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -19,9 +19,9 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="userName">JerryDev</string>
     <string name="email">jerrytocto@gmail.com</string>
-    <string name="nombre_usuario">Nombres</string>
-    <string name="ape_paterno">Apellido paterno</string>
-    <string name="userEmail">Correo electrónico</string>
+    <string name="nombre_usuario">Nombres (Obligatorio)</string>
+    <string name="ape_paterno">Apellido paterno(obligatorio)</string>
+    <string name="userEmail">Correo electrónico( Obligatorio)</string>
     <string name="add_photo">Agregar foto (Opcional)</string>
     <string name="label_foto">Seleccionar foto (Opcional)</string>
     <string name="afiliarPer">Afiliar Persona</string>
@@ -37,6 +37,8 @@
     <string name="RUC">RUC</string>
     <string name="estado">Estado</string>
     <string name="DNI">DNI</string>
-    <string name="ape_materno">Apellido materno</string>
-    <string name="userNomCor">Nombre corto\n</string>
+    <string name="ape_materno">Apellido materno(Obligatorio)</string>
+    <string name="menu_vincularUser">Vincular Usuario</string>
+    <string name="nav_prueba">Opción de prueba</string>
+
 </resources>

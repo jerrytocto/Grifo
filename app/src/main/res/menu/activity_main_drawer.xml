@@ -4,6 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
@@ -16,5 +17,15 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+
+        <item
+            android:id="@+id/nav_vincular_user"
+            android:icon="@drawable/ic_add_user"
+            android:title="@string/menu_vincularUser" />
+
+        <item
+            android:id="@+id/nav_prueba"
+            android:icon="@drawable/ic_add_user"
+            android:title="@string/nav_prueba" />
     </group>
 </menu>

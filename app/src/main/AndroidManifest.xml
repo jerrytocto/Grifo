@@ -9,6 +9,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".grifo"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -18,21 +19,24 @@
         android:theme="@style/Theme.Grifo"
         tools:targetApi="31">
         <activity
-            android:name=".activity.apiSunat.ApiSunatActivity"
+            android:name=".ui.view.activity.ApiWhatsAppActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.registrarUsuarioActivity"
+            android:name=".ui.view.activity.ApiSunatActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.elegirTipoUsuarioActivity"
+            android:name=".ui.view.activity.RegistrarUsuarioActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.InicioActivity"
+            android:name=".ui.view.activity.elegirTipoUsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.InicioActivity"
             android:exported="false"
             android:label="@string/title_activity_inicio"
             android:theme="@style/Theme.Grifo.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.view.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

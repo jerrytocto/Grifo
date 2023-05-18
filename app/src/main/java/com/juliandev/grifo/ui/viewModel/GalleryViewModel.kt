@@ -1,4 +1,4 @@
-package com.juliandev.grifo.activity.ui.gallery
+package com.juliandev.grifo.ui.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

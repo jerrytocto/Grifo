@@ -1,4 +1,4 @@
-package com.juliandev.grifo.activity
+package com.juliandev.grifo.ui.view.activity
 
 import android.os.Bundle
 import android.view.Menu
@@ -13,7 +13,9 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.juliandev.grifo.R
 import com.juliandev.grifo.databinding.ActivityInicioBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+//@AndroidEntryPoint
 class InicioActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -27,6 +29,7 @@ class InicioActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarInicio.toolbar)
 
+        //Evento que recibe el onclick del botón flotante
         binding.appBarInicio.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -38,7 +41,7 @@ class InicioActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_prueba,R.id.nav_vincular_user
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

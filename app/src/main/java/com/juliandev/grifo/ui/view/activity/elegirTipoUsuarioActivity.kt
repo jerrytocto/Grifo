@@ -1,10 +1,8 @@
-package com.juliandev.grifo.activity
+package com.juliandev.grifo.ui.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.juliandev.grifo.R
-import com.juliandev.grifo.activity.apiSunat.ApiSunatActivity
 import com.juliandev.grifo.databinding.ActivityElegirTipoUsuarioBinding
 
 class elegirTipoUsuarioActivity : AppCompatActivity() {
@@ -28,7 +26,7 @@ class elegirTipoUsuarioActivity : AppCompatActivity() {
     }
 
     private fun showViewRegisterPerson() {
-        val intent = Intent(this,registrarUsuarioActivity::class.java)
+        val intent = Intent(this, RegistrarUsuarioActivity::class.java)
         startActivity(intent)
     }
 }
